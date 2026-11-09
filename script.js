@@ -68,3 +68,5 @@ el.textContent=o;if(f>=n){clearInterval(t);el.textContent=txt;tag.classList.remo
 setTimeout(go,500);setInterval(go,4000)})();
 
 document.getElementById('tb').addEventListener('click',function(e){if(!getSelection().toString())document.getElementById('ti').focus()});
+
+document.getElementById('tb').addEventListener('click',function(e){if(!getSelection().toString())document.getElementById('ti').focus()});

@@ -271,3 +271,4 @@ form.c.glass input,form.c.glass textarea{background:rgba(255,255,255,.45);border
 .glass{position:relative;overflow:hidden;isolation:isolate}
 .glass:before{content:"";position:absolute;z-index:-1;width:240px;height:240px;border-radius:50%;filter:blur(60px);pointer-events:none;background:rgba(56,189,248,.35);left:-70px;top:-70px}
 .glass:after{content:"";position:absolute;z-index:-1;width:220px;height:220px;border-radius:50%;filter:blur(60px);pointer-events:none;background:rgba(139,92,246,.28);right:-70px;bottom:-70px}
+

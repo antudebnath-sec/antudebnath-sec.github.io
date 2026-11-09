@@ -21,7 +21,10 @@ var out=document.getElementById('out'),ti=document.getElementById('ti'),hist=[],
 var C={help:'Commands: whoami, skills, certs, services, contact, clear',
 whoami:'Antu Debnath — Security Engineer & Security Researcher\nCEH · 6+ years of experience',
 skills:'Web app security · Pentesting · Network security · Vulnerability research · Automation',
-certs:'Certified Ethical Hacker (CEH)',
+certs:'- Certified Ethical Hacker (CEH), EC-Council
+- Certified Red Team Operator (CRTO)
+- OffSec Certified Professional (OSCP)
+- Certified OSINT Specialist (COSP)',
 services:'Web pentest · Network testing · Vulnerability assessment · Audits · Bug bounty · Security Training',
 contact:'Use the contact form below or email - antudebnath1010@gmail.com'};
 function pr(t){out.textContent+=t+'\n';out.scrollTop=out.scrollHeight}

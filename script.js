@@ -21,16 +21,13 @@ var out=document.getElementById('out'),ti=document.getElementById('ti'),hist=[],
 var C={help:'Commands: whoami, skills, certs, services, contact, clear',
 whoami:'Antu Debnath — Security Engineer & Security Researcher\nCEH · 6+ years of experience',
 skills:'Web app security · Pentesting · Network security · Vulnerability research · Automation',
-certs:'- Certified Ethical Hacker (CEH), EC-Council
-- Certified Red Team Operator (CRTO)
-- OffSec Certified Professional (OSCP)
-- Certified OSINT Specialist (COSP)',
+certs:'- Certified Ethical Hacker (CEH), EC-Council\n- Certified Red Team Operator (CRTO)\n- OffSec Certified Professional (OSCP)\n- Certified OSINT Specialist (COSP)',
 services:'Web pentest · Network testing · Vulnerability assessment · Audits · Bug bounty · Security Training',
 contact:'Use the contact form below or email - antudebnath1010@gmail.com'};
 function pr(t){out.textContent+=t+'\n';out.scrollTop=out.scrollHeight}
 pr('Welcome. Type "help" to begin.');
 document.getElementById('tf').onsubmit=function(e){e.preventDefault();var c=ti.value.trim().toLowerCase();ti.value='';if(!c)return;hist.push(c);hp=hist.length;pr('$ '+c);
-if(c==='clear'){out.textContent=''}else pr(C[c]||'command not found: '+c+' (try "help")')};
+if(c==='clear'){out.textContent=''}else pr(Object.prototype.hasOwnProperty.call(C,c)?C[c]:'command not found: '+c+' (try "help")')};
 ti.onkeydown=function(e){if(e.key==='ArrowUp'&&hp>0){hp--;ti.value=hist[hp]}else if(e.key==='ArrowDown'){hp=Math.min(hp+1,hist.length);ti.value=hist[hp]||''}};
 document.getElementById('cf').onsubmit=function(e){e.preventDefault();var n=document.getElementById('cn').value,m=document.getElementById('cm').value,em=document.getElementById('ce').value;
 location.href='mailto:antudebnath1010@gmail.com?subject='+encodeURIComponent('Security enquiry from '+n)+'&body='+encodeURIComponent(m+'\n\nReply to: '+em)};
